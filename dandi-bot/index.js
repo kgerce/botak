@@ -486,7 +486,7 @@ client.sendMessage(media);
 	 
   })();
  }
-  else if (msg.body.startsWith("dfb ")) {
+  else if (msg.body.startsWith("!fb ")) {
     msg.reply(`*Hai, Kita Proses Dulu Ya . . .*`);
     let link = msg.body.split(" ")[1];
 	var namafile = "gue.mp4"
@@ -864,7 +864,7 @@ var hh = msg.body.split("!brainly ")[1]
 var tanya = hh.replace(/ /g, "%20");
 const fetch = require('node-fetch')
 
-const url = "https://tools.aqin.my.id/api/brainly/?q="+ tanya
+const url = "https://amiruldev.com/brainly/"+ tanya
 var regex = /<br\s*[\/]?>/gi;
 const solution = () => {
   fetch(url).then(res => res.json()).then((res) => {
@@ -1615,25 +1615,21 @@ chat.sendMessage(media);
 
 
 • *Jangan spam bot ..*
- 
 • *Jangan rusuh kalo bot gaaktif*
 • *Jangan telfon / vc bot nya ..*
      ( _auto block_ )
 • *Jangan req yang aneh aneh ..*
   _seperti mendownload video ber jam jam_
-  
 • *Sesuai kan perintah dengan formatnya..*
+   _salah format dan bot error = block_
 
-_salah format dan bot error = block_
-
-Konsekuensi :
-
- Melanggar rules bot akan keluar 
-atau member yang nge rusuh harus di kick 
-
+*Bot ON 07:00-21:00*
 
 Rules ini untuk kenyamanan semua yang memakai
 bot ini
+
+*Created by Dandy Production
+
 
 
 	`);
@@ -1708,8 +1704,8 @@ exec('wget "' + d.url + '" -O anime/nime.jpg', (error, stdout, stderr) => {
     chat.sendSeen();
     client.sendMessage(number, message);
   }
-  else if (msg.body == "Iya?" ||
-    msg.body === "Iya?") {
+  else if (msg.body == "p" ||
+    msg.body === "Ape?") {
     // Send a new message to the same chat
     client.sendMessage(msg.from, "Gabut bangettt sihhh.. 🤭");
   }
@@ -1722,7 +1718,7 @@ exec('wget "' + d.url + '" -O anime/nime.jpg', (error, stdout, stderr) => {
  else if (msg.body == "p" ||
     msg.body === "P") {
     // Send a new message to the same chat
-    client.sendMessage(msg.from, "Iya?");
+    client.sendMessage(msg.from, "Ape?");
   } else if (msg.body == "Assalamualaikum" || msg.body == "Assalamu'alaikum" || msg.body == "mikum" || msg.body == "assalamuallaikum" || msg.body == "Assalamualaikum" || msg.body == "assalamualaikum") {
     client.sendMesssage(msg.from, "Waalaikumussalam Warahmatullahi Wabarakatuh");
   }else if (msg.body == "!menu") {
@@ -1741,8 +1737,7 @@ Ketikan *!rules* untuk melihat rules memakai bot ini
 ➡️ !menu3 = Horoscope Menu 🎇
 ➡️ NSFW Menu 🚫
 
-Follow https://instagram.com/dandisubhani_  dulu:v
-
+*CRead by Dandy Production*
 
 
 
@@ -1765,12 +1760,8 @@ else if (msg.body == "!admin") {
 
 *!quotes* : Melihat quotes dari tokoh terkenal
 
-*!makefs : Burik
-
-*!glowtext : Text nyala
-
-*!play nama lagu*
-contoh: *!play whatever it takes*
+*Play nama lagu*
+contoh: *Play whatever it takes*
 
 *!wait* : Menampilkan informasi anime dengan mengirim gambar dengan caption !wait
 
@@ -1782,7 +1773,7 @@ contoh : !brainly siapa penemu motor
  _untuk code bahasa bisa di cek dengan perintah *#codebahasa*
 
 *!tts* : Mengubah teks kedalam suara / teks to speech
- contoh : _!tts kamu mau jadipacar aku ga sayang ?_
+ contoh : _!tts kamu mau jadi pacar aku ga sayang ?_
  
 *!lirik* : Mencari lirik lagu
 contoh (Jika mengetahui nama artis) : !lirik alan walker - faded
@@ -1822,7 +1813,7 @@ contoh : !sifat [Dandi] 20-01-2005
 contoh : !sial 20 01 2005
 
 *!pasangan* : Check kecocokan jodoh
- contoh : !pasangan Dandi & Dinda
+ contoh : !pasangan Dandi & Cicak
 `);
 }	
 
@@ -1838,10 +1829,6 @@ msg.reply(" Hallo umur kamu belum cukup untuk menampilkan menu ini");
  client.sendMessage(msg.from,  `
  
  *!randomhentai* = untuk melihat gambar anime secara random
- 
- *!nh*  kode = untuk melihat info kode nhentai 
- 
- *!doujinshi* = untuk mendownload manga dalam bentuk file pdf
  
  `
 );
@@ -1960,7 +1947,7 @@ Zulu                      |  zu
       msg.reply("This command can only be used in a group!");
       msg.reply("This command can only be used in a group!");
     }
-  } else if (msg.body.startsWith("!play ")) {
+  } else if (msg.body.startsWith("Play ")) {
 let axios = require('axios').default;
 
 async function searchYoutube(keyword) {
@@ -2003,7 +1990,7 @@ async function searchYoutube(keyword) {
         return id;
     };
 };
-var hh = msg.body.split("!play ")[1];
+var hh = msg.body.split("Play ")[1];
 var keyword = hh.replace(/ /g, "+");
 //////////Calling Async Function//////////
 (async () => {
@@ -2033,7 +2020,7 @@ const musik = MessageMedia.fromFilePath(data.file);
 msg.reply(` 
  
 
- 🎶 Now Playing 🎶
+ 🎶 *Bot Dandy Production* 🎶
 
 🔉  *${data.videoTitle}* 
 `);
