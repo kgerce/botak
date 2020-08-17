@@ -139,7 +139,7 @@ client.on('group_join', async (notification) => {
     console.log('join', notification);
     const botno = notification.chatId.split('@')[0];
     let number = await notification.id.remote;
-    client.sendMessage(number, `Hai perkenalkan Aku Dandi Bot, Selamat Datang di Group ini`);
+    client.sendMessage(number, `*Hai New Member,Selamat Datang di Group ini*`);
 
     const chats = await client.getChats();
     for (i in chats) {
@@ -159,7 +159,7 @@ client.on('group_join', async (notification) => {
         if (participant.isAdmin) {
             //admins.push(participant.id.user);
             admins[contact.pushname] = participant.id.user;
-            client.sendMessage(participant.id._serialized, 'Hai Admin, Ada Member Baru di Group Mu');
+            client.sendMessage(participant.id._serialized, '*Notification* : New Member bergabung');
             const media = MessageMedia.fromFilePath('./test/test.pdf');
             client.sendMessage(participant.id._serialized, media);
         }
@@ -196,7 +196,7 @@ client.on('group_leave', async (notification) => {
         if (participant.isAdmin) {
             //admins.push(participant.id.user);
             admins[contact.pushname] = participant.id.user;
-            client.sendMessage(participant.id._serialized, 'Hai Admin, Ada Member Yang Keluar dari Group Mu');
+            client.sendMessage(participant.id._serialized, ' *Notification*: Member keluar dari grup ');
             const media = MessageMedia.fromFilePath('./test/test.pdf');
             client.sendMessage(participant.id._serialized, media);
         }
